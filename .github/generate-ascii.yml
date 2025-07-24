@@ -4,7 +4,8 @@ on:
 push
 
 jobs:
-  ascii_job: unbuntu-latest
+  ascii_job: 
+  runs-on: unbuntu-latest
   steps:
   - name: Checkout Repo
     uses: actions/checkout@v4
