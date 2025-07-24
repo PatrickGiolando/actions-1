@@ -5,22 +5,22 @@ on:
 
 jobs:
   ascii_job: 
-  runs-on: unbuntu-latest
-  steps:
-  - name: Checkout Repo
-    uses: actions/checkout@v4
+    runs-on: unbuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
   
-  - name: Install Cowsay Program
-    run: sudo apt-get install cowsay -y
+    - name: Install Cowsay Program
+     run: sudo apt-get install cowsay -y
 
-  - name: Execute Cowsay CMD
-    run: cowsay -f dragon "Run for conver, I am a DRAGON ....Rawr" >> dragon.txt
+    - name: Execute Cowsay CMD
+      run: cowsay -f dragon "Run for conver, I am a DRAGON ....Rawr" >> dragon.txt
 
-  - name: Test Files Exists
-    run: grep -i "dragon" dragon.txt
+    - name: Test Files Exists
+      run: grep -i "dragon" dragon.txt
 
-  - name: Read Files
-    run: cat dragon.txt
+    - name: Read Files
+     run: cat dragon.txt
 
-  - name: List Repo Files
-    run: ls -ltra
+    - name: List Repo Files
+      run: ls -ltra
