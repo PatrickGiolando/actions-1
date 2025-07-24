@@ -1,0 +1,22 @@
+name: Generate ASCII Artwork
+
+on:
+push
+
+jobs:
+  ascii_job: unbuntu-latest
+  steps:
+  - name: Checkout Repo
+    uses: actions/checkout@v4
+  
+  - name: Execute Cowsay CMD
+    run: cowsay -f dragon "Run for conver, I am a DRAGON ....Rawr" >> dragon.txt
+
+  - name: Test Files Exists
+    run: grep -i "dragon" dragon.txt
+
+  - name: Read Files
+    run: cat dragon.txt
+
+  - name: List Repo Files
+    run: ls -ltra
