@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Read File
-      uses: cat dragon.txt
+      run: cat dragon.txt
   
     - name: List Repo Files
       run: ls -ltra 
